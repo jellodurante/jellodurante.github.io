@@ -3,22 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jello Durante | IT Professional & Computer Engineer | Former SME at Accenture | Specializing in System Troubleshooting, SAP, & Oracle</title>
+  <title>Jello Durante | IT Support & Junior Desktop Engineer</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: #0f172a;
+      background: #0b1220;
       color: #e5e7eb;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     header {
@@ -28,126 +24,178 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      background: linear-gradient(135deg, #2563eb, #1e293b);
+      background: radial-gradient(circle at top, #1e40af, #020617);
       animation: fadeIn 1.5s ease;
     }
 
-    header h1 {
-      font-size: 3rem;
-    }
-
-    header p {
-      margin: 1rem 0;
-      max-width: 600px;
-    }
+    header h1 { font-size: 3.2rem; font-weight: 700; }
+    header p { margin: 1rem 0 2rem; max-width: 700px; color: #c7d2fe; }
 
     .btn {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.75rem 1.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0.4rem;
+      padding: 0.8rem 1.6rem;
       border-radius: 30px;
       background: #22c55e;
-      color: #0f172a;
+      color: #020617;
       text-decoration: none;
       font-weight: 600;
-      transition: transform 0.3s, background 0.3s;
+      transition: all 0.3s ease;
     }
+
+    .btn.secondary { background: #38bdf8; }
 
     .btn:hover {
       transform: translateY(-3px);
-      background: #16a34a;
+      filter: brightness(1.1);
+    }
+
+    nav {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 12px;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.9rem;
     }
 
     section {
-      padding: 4rem 10%;
-      animation: slideUp 1.2s ease;
+      padding: 5rem 10%;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     h2 {
       color: #60a5fa;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
     }
 
     .card {
-      background: #020617;
-      padding: 1.5rem;
-      border-radius: 16px;
-      margin-bottom: 1rem;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      background: linear-gradient(145deg, #020617, #020617cc);
+      padding: 1.8rem;
+      border-radius: 18px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    }
+
+    .badge {
+      display: inline-block;
+      background: #1e293b;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      color: #93c5fd;
+      margin-top: 0.6rem;
     }
 
     footer {
       text-align: center;
-      padding: 2rem;
+      padding: 2.5rem;
       background: #020617;
       color: #9ca3af;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideUp {
-      from { transform: translateY(40px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
   </style>
 </head>
 
 <body>
 
+  <nav>
+    <a href="#about">About</a>
+    <a href="#certs">Certs</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+  </nav>
+
   <header>
     <h1>Jello Durante</h1>
-    <p>IT Professional & Computer Engineer | Former SME at Accenture | Specializing in System Troubleshooting, SAP, & Oracle</p>
+    <p>IT Support | Junior Desktop Engineer | Customer‑Focused Technical Professional</p>
 
-    <a class="btn" href="Jello_Durante_Resume.pdf" download>Download Resume</a>
-    <a class="btn" href="mailto:jellodurante95@gmail.com">Contact Me</a>
+    <div>
+      <a class="btn" href="Jello_Durante_Resume.pdf" download>⬇ Download Resume</a>
+      <a class="btn secondary" href="mailto:jellodurante95@gmail.com">✉ Contact Me</a>
+      <a class="btn secondary" href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+      <a class="btn secondary" href="https://github.com/jellodurante" target="_blank">GitHub</a>
+    </div>
   </header>
 
-  <section>
+  <section id="about">
     <h2>About Me</h2>
     <div class="card">
       <p>
-        Detail-oriented IT professional with a Bachelor of Science in Computer Engineering
-        and over four years of experience in technical troubleshooting, IT support, and
-        customer service. Recognized as a Valuable Subject Matter Expert and Perfect Quality
-        Score awardee.
+        Detail‑oriented IT professional with a Bachelor of Science in Computer Engineering and 4+ years of experience in IT support, desktop troubleshooting, and enterprise systems. Proven ability to resolve hardware, software, and network issues while delivering high‑quality customer support in fast‑paced environments.
       </p>
+      <span class="badge">ATS‑Optimized</span>
     </div>
   </section>
 
-  <section>
+  <section id="certs">
     <h2>Certifications</h2>
-    <div class="card">Microsoft Security Essentials Professional Certificate – Microsoft & LinkedIn (2025)</div>
-    <div class="card">Ethical Hacking: Trojans and Backdoors – LinkedIn (2025)</div>
-    <div class="card">IT Security, WWW & Cisco Packet Tracer – EARIST Manila</div>
-    <div class="card">Valuable SME & Perfect Quality Score – Accenture Philippines</div>
+    <div class="grid">
+      <div class="card">Microsoft Security Essentials<br><span class="badge">Microsoft / LinkedIn</span></div>
+      <div class="card">Ethical Hacking: Trojans & Backdoors<br><span class="badge">LinkedIn</span></div>
+      <div class="card">IT Security & Cisco Packet Tracer<br><span class="badge">EARIST Manila</span></div>
+      <div class="card">Valuable SME & Perfect Quality Score<br><span class="badge">Accenture</span></div>
+    </div>
   </section>
 
-  <section>
+  <section id="experience">
     <h2>Experience</h2>
     <div class="card">
       <strong>Transaction Processing Associate – Accenture</strong>
-      <p>Provided first-level technical and billing support using SAP, Oracle, and MDM systems.</p>
+      <p>Provided first‑level technical and billing support using SAP, Oracle, and MDM systems. Recognized for accuracy, SME contribution, and quality excellence.</p>
     </div>
-
     <div class="card">
-      <strong>Field Service Engineer – E-Copy Corporation</strong>
-      <p>Installed and maintained advanced cloud-based photocopier systems.</p>
+      <strong>Field Service Engineer – E‑Copy Corporation</strong>
+      <p>Installed, configured, and maintained advanced cloud‑based photocopier and document management systems.</p>
     </div>
   </section>
 
-  <section>
-    <h2>Skills</h2>
-    <div class="card">
-      SAP • Oracle • MDM • IT Troubleshooting • Networking • Customer Support
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="grid">
+      <div class="card">IT Troubleshooting & Desktop Support</div>
+      <div class="card">SAP • Oracle • MDM</div>
+      <div class="card">Networking & IT Security Fundamentals</div>
+      <div class="card">Customer Support & Incident Resolution</div>
     </div>
   </section>
 
   <footer>
-    © 2026 Jello Durante | Built for recruiters
+    © 2026 Jello Durante • IT Support & Junior Desktop Engineer
   </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.15 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
 
 </body>
 </html>
