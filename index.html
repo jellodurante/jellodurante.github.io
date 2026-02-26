@@ -162,6 +162,33 @@
   .nav-highlight:hover {
     opacity: 0.9;
     }
+    /* ===== Certificate Image Modal ===== */
+
+  .card img {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    }
+
+  .card img:hover {
+    transform: scale(1.05);
+    }  
+
+/* Fullscreen modal */
+  .modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    }
+
+  .modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    }
   </style>
   
 </head>
@@ -202,8 +229,10 @@
     <div class="grid">
       <div class="card">
         <img 
-        src="certs-images/Career Essentials in Cybersecurity.png"
-        alt="Career Essentials in Cybersecurity Certificate"
+          src="certs-images/Career Essentials in Cybersecurity.png"
+          alt="Career Essentials in Cybersecurity"
+          class="cert-img"
+          onclick="openModal(this.src)"
         >
         <strong>Career Essentials in Cybersecurity</strong><br>
         <span class="badge">Microsoft / LinkedIn</span>
@@ -258,19 +287,33 @@
     © 2026 Jello Durante • IT Professional & Computer Engineer
   </footer>
 
-  <script>
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('show');
-      });
-    }, { threshold: 0.15 });
+<script>
+  const sections = document.querySelectorAll('section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('show');
+    });
+  }, { threshold: 0.15 });
 
-    sections.forEach(section => observer.observe(section));
-  </script>
+  sections.forEach(section => observer.observe(section));
+
+  /* 🔽 ADD THIS PART 🔽 */
+  function openModal(src) {
+    document.getElementById("modalImg").src = src;
+    document.getElementById("imgModal").style.display = "flex";
+  }
+
+  function closeModal() {
+    document.getElementById("imgModal").style.display = "none";
+  }
+</script>
+    <div id="imgModal" class="modal" onclick="closeModal()">
+      <img id="modalImg">
+    </div>
 
 </body>
 </html>
+
 
 
 
