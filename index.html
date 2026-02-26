@@ -189,6 +189,33 @@
     max-height: 90%;
     border-radius: 10px;
     }
+
+ /* === Certifications UX polish === */
+
+ /* Card hover lift */
+  .card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+   .card:hover {
+     transform: translateY(-6px);
+     box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+
+/* Make cert images feel clickable */
+   .card img {
+     cursor: pointer;
+    }
+
+/* Subtle click hint */
+   .card::after {
+     content: "Click to view";
+     display: block;
+     margin-top: 10px;
+     font-size: 0.75rem;
+    opacity: 0.6;
+    }
+    
   </style>
   
 </head>
@@ -381,6 +408,7 @@
 
 </body>
 </html>
+
 
 
 
