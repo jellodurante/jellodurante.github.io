@@ -364,24 +364,6 @@
       <div class="card">Customer Support & Incident Resolution</div>
     </div>
   </section>
-
-  <section id="certs-extra" class="fade-in">
-  <h2>Certifications</h2>
-
-  <div class="card-grid">
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google.png" alt="Google">
-      <h3>Google IT Support Professional</h3>
-      <a href="certs/google-it-support.pdf" target="_blank">View Certificate</a>
-    </div>
-
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CompTIA_logo.svg" alt="CompTIA">
-      <h3>CompTIA A+</h3>
-      <a href="certs/comptia-a-plus.pdf" target="_blank">View Certificate</a>
-    </div>
-  </div>
-</section>
   
   <footer>
     © 2026 Jello Durante • IT Professional & Computer Engineer
@@ -406,36 +388,13 @@
   function closeModal() {
     document.getElementById("imgModal").style.display = "none";
   }
-
-<script>
-  const reveals = document.querySelectorAll('.reveal');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  }, { threshold: 0.15 });
-
-  reveals.forEach(el => observer.observe(el));
-
-  function openModal(src) {
-    document.getElementById("modalImg").src = src;
-    document.getElementById("imgModal").style.display = "flex";
-  }
-
-  function closeModal() {
-    document.getElementById("imgModal").style.display = "none";
-  }
-</script>
-  
 </script>
     <div id="imgModal" class="modal" onclick="closeModal()">
       <img id="modalImg">
     </div>
 </body>
 </html>
+
 
 
 
