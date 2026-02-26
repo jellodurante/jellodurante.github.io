@@ -137,8 +137,11 @@
     }
 
   .card img {
-    max-width: 120px;
-    margin-bottom: 15px;
+    width: 100%;
+    max-height: 160px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    border-radius: 8px;
     }
 
   .card a {
@@ -197,7 +200,14 @@
   <section id="certs">
     <h2>Certifications</h2>
     <div class="grid">
-      <div class="card">Microsoft Security Essentials<br><span class="badge">Microsoft / LinkedIn</span></div>
+      <div class="card">
+        <img 
+        src="certs-images/Career Essentials in Cybersecurity.png"
+        alt="Career Essentials in Cybersecurity Certificate"
+        >
+        <strong>Career Essentials in Cybersecurity</strong><br>
+        <span class="badge">Microsoft / LinkedIn</span>
+      </div>
       <div class="card">Ethical Hacking: Trojans & Backdoors<br><span class="badge">LinkedIn</span></div>
       <div class="card">IT Security & Cisco Packet Tracer<br><span class="badge">EARIST Manila</span></div>
       <div class="card">Valuable SME & Perfect Quality Score<br><span class="badge">Accenture</span></div>
@@ -261,6 +271,7 @@
 
 </body>
 </html>
+
 
 
 
