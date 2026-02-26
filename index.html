@@ -213,7 +213,19 @@
      display: block;
      margin-top: 10px;
      font-size: 0.75rem;
-    opacity: 0.6;
+     opacity: 0.6;
+    }
+
+    /* Scroll reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
     }
     
   </style>
@@ -241,7 +253,7 @@
     </div>
   </header>
 
-  <section id="about">
+  <section id="about" class="reveal">
     <h2>About Me</h2>
     <div class="card">
       <p>
@@ -251,7 +263,7 @@
     </div>
   </section>
 
-  <section id="certs">
+  <section id="certs" class="reveal">
     <h2>Certifications</h2>
     <div class="grid">
       <div class="card">
@@ -338,7 +350,7 @@
     
   </section>
 
-  <section id="experience">
+ <section id="experience" class="reveal">
     <h2>Experience</h2>
     <div class="card">
       <strong>Transaction Processing Associate – Accenture</strong>
@@ -350,7 +362,7 @@
     </div>
   </section>
 
-  <section id="skills">
+<section id="skills" class="reveal">
     <h2>Technical Skills</h2>
     <div class="grid">
       <div class="card">IT Troubleshooting & Desktop Support</div>
@@ -401,6 +413,24 @@
   function closeModal() {
     document.getElementById("imgModal").style.display = "none";
   }
+
+  <script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+  },
+    { threshold: 0.15 }
+  );
+
+      reveals.forEach(el => observer.observe(el));
+</script>
+  
 </script>
     <div id="imgModal" class="modal" onclick="closeModal()">
       <img id="modalImg">
@@ -408,6 +438,7 @@
 
 </body>
 </html>
+
 
 
 
