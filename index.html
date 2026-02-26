@@ -220,7 +220,21 @@
 .card img:hover {
   transform: scale(1.05);
 }
-    
+    /* Modal animation */
+.modal img {
+  animation: zoomIn 0.25s ease-out;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
   </style>
   
 </head>
@@ -388,12 +402,19 @@
   function closeModal() {
     document.getElementById("imgModal").style.display = "none";
   }
+  document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closeModal();
+  }
+});
+  
 </script>
     <div id="imgModal" class="modal" onclick="closeModal()">
       <img id="modalImg">
     </div>
 </body>
 </html>
+
 
 
 
