@@ -286,29 +286,34 @@ header {
 
 .hero {
   display: grid;
-  grid-template-columns: 40fr 300px; /* 👈 closer columns */
+  grid-template-columns: 1fr 1fr;   /* balanced */
   align-items: center;
-  gap: 10px;                          /* 👈 MUCH closer */
-  padding: 0 5%;                      /* 👈 less empty space */
+  gap: 40px;                        /* controls closeness */
+  max-width: 1200px;                /* prevents edge drifting */
+  margin: 0 auto;                   /* centers hero block */
   min-height: 100vh;
   position: relative;
-    /* ✅ ADD THESE LINES */
-  padding-top: 0px;
   padding-bottom: 80px;
 }
 
-  .hero::after {
+.hero::after {
   content: "";
   position: absolute;
+  left: 50%;
   top: 50%;
-  left: 48%;
   transform: translate(-50%, -50%);
-  height: 270px;                 /* line height */
-  width: 4px;                    /* line thickness */
-  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.6), transparent); /* soft white */
-  border-radius: 2px;
+  height: 290px;
+  width: 3px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
 }
-
+.hero-text {
+  max-width: 520px;
+}
     
 .hero-text h1 {
   font-size: 3rem;
@@ -326,11 +331,7 @@ header {
 }
 .hero-img {
   display: flex;
-  justify-content: flex-end; /* pushes image to the right */
-}
-.hero-img {
-  justify-self: start;     /* pulls image toward divider */
-  margin-left: -20px;     /* 👈 subtle nudge left */
+  justify-content: flex-start; /* closer to text */
 }
     .hero-divider {
   width: 2px;
@@ -553,6 +554,7 @@ header {
     </div>
 </body>
 </html>
+
 
 
 
