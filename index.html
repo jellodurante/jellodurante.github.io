@@ -307,15 +307,17 @@ header {
   margin: 16px 0 28px;
   color: #c7d2fe;
 }
-
+.hero-img {
+  display: flex;
+  justify-content: flex-end; /* pushes image to the right */
+}
+    
 .hero-img img {
   width: 100%;
   max-width: 520px;          /* 👈 controls size */
   height: auto;
   border-radius: 22px;
   box-shadow: 0 30px 70px rgba(0,0,0,0.6);
-  margin: 0 auto;
-  display: block;
 
   opacity: 0;
   transform: scale(0.9);
@@ -350,22 +352,25 @@ header {
   
  <header>
   <div class="hero">
-    <div class="hero-img">
-      <img src="assets/grad.png" alt="Jello Durante Graduation Photo">
+  <!-- LEFT SIDE -->
+  <div class="hero-text">
+    <h1>Hi! I’m <span class="accent">Jello Durante</span></h1>
+    <h2>IT Professional & Computer Engineer</h2>
+
+    <p>
+      Detail-oriented IT professional passionate about technology,
+      security, and enterprise systems.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn" href="Jello_Durante_Resume.pdf" download>Download Resume</a>
+      <a class="btn secondary" href="https://www.linkedin.com/in/jellodurante" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
     </div>
+  </div>
 
-    <div class="hero-text">
-  <h1>Hi! I’m <span class="accent">Jello Durante</span></h1>
-  <h2>IT Professional & Computer Engineer</h2>
-
-  <p>
-    Detail-oriented IT professional passionate about technology,
-    security, and enterprise systems.
-  </p>
-
-  <div class="hero-actions">
-    <a class="btn" href="Jello_Durante_Resume.pdf" download>Download Resume</a>
-    <a class="btn secondary" href="https://www.linkedin.com/in/jellodurante" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+  <!-- RIGHT SIDE -->
+  <div class="hero-img">
+    <img src="assets/grad.png" alt="Jello Durante Graduation Photo">
   </div>
 </div>
 </header>
@@ -524,6 +529,7 @@ header {
     </div>
 </body>
 </html>
+
 
 
 
