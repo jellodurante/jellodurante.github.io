@@ -286,13 +286,26 @@ header {
 
 .hero {
   display: grid;
-  grid-template-columns: 1fr 420px; /* TEXT | IMAGE */
+  grid-template-columns: 1fr 420px; /* text | image */
   align-items: center;
-  gap: 80px;
-  padding: 0 10%;
+  gap: 40px;              /* 👈 was 80px */
+  padding: 0 8%;          /* 👈 slightly tighter */
   min-height: 100vh;
+  position: relative;     /* 👈 needed for divider */
 }
 
+  .hero::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 220px;                 /* line height */
+  width: 2px;                    /* line thickness */
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.6), transparent); /* soft white */
+  border-radius: 2px;
+}
+    
 .hero-text h1 {
   font-size: 3rem;
 }
@@ -529,6 +542,7 @@ header {
     </div>
 </body>
 </html>
+
 
 
 
