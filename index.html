@@ -286,15 +286,15 @@ header {
 
 .hero {
   display: grid;
-  grid-template-columns: 1fr 300px; /* 👈 closer columns */
+  grid-template-columns: 40fr 300px; /* 👈 closer columns */
   align-items: center;
-  gap: 16px;                          /* 👈 MUCH closer */
+  gap: 10px;                          /* 👈 MUCH closer */
   padding: 0 5%;                      /* 👈 less empty space */
   min-height: 100vh;
   position: relative;
     /* ✅ ADD THESE LINES */
-  padding-top: 50px;
-  padding-bottom: 120px;
+  padding-top: 0px;
+  padding-bottom: 80px;
 }
 
   .hero::after {
@@ -330,7 +330,10 @@ header {
 }
 .hero-img {
   justify-self: start;     /* pulls image toward divider */
-  margin-left: -10px;     /* 👈 subtle nudge left */
+  margin-left: -20px;     /* 👈 subtle nudge left */
+}
+    .hero-divider {
+  width: 2px;
 }
     
 .hero-img img {
@@ -550,6 +553,7 @@ header {
     </div>
 </body>
 </html>
+
 
 
 
