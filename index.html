@@ -16,21 +16,7 @@
       color: #e5e7eb;
       line-height: 1.7;
     }
-
-    header {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: radial-gradient(circle at top, #1e40af, #020617);
-      animation: fadeIn 1.5s ease;
-    }
-
-    header h1 { font-size: 3.2rem; font-weight: 700; }
-    header p { margin: 1rem 0 2rem; max-width: 700px; color: #c7d2fe; }
-
+    
     .btn {
       display: inline-flex;
       align-items: center;
@@ -50,21 +36,6 @@
     .btn:hover {
       transform: translateY(-3px);
       filter: brightness(1.1);
-    }
-
-    nav {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      display: flex;
-      gap: 12px;
-      z-index: 1000;
-    }
-
-    nav a {
-      color: #93c5fd;
-      text-decoration: none;
-      font-size: 0.9rem;
     }
 
     section {
@@ -91,12 +62,6 @@
       gap: 1.5rem;
     }
 
-    .card {
-      background: linear-gradient(145deg, #020617, #020617cc);
-      padding: 1.8rem;
-      border-radius: 18px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-    }
 
     .badge {
       display: inline-block;
@@ -235,24 +200,7 @@
     opacity: 1;
   }
 }
-    /* === HERO ANIMATIONS === */
 
-.hero {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 48px;
-  align-items: center;
-  padding: 80px 0;
-}
-
-.hero-img img {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  transform: scale(0.85);
-  animation: heroImgIn 1s ease forwards;
-}
 
 .hero-text {
   opacity: 0;
@@ -292,19 +240,109 @@
     transform: translateY(0);
   }
 }
+    /* ===== TOP NAV ===== */
+.top-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+}
+
+.nav-left {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-center a {
+  margin: 0 14px;
+  color: #93c5fd;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-center a:hover {
+  color: #22c55e;
+}
+
+.contact-btn {
+  background: #22c55e;
+  color: #020617;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ===== HERO ===== */
+header {
+  padding-top: 120px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  align-items: center;
+  gap: 60px;
+  padding: 0 10%;
+  min-height: 100vh;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+}
+
+.hero-text h2 {
+  color: #60a5fa;
+  margin: 10px 0;
+}
+
+.hero-text p {
+  max-width: 520px;
+  margin: 16px 0 28px;
+  color: #c7d2fe;
+}
+
+.hero-img img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+  opacity: 0;
+  transform: scale(0.85);
+  animation: heroImgIn 1s ease forwards;
+}
+
+/* Accent name */
+.accent {
+  color: #60a5fa;
+}
+    
   </style>
   
 </head>
 
 <body>
+  
+<nav class="top-nav">
+  <div class="nav-left">JELLO</div>
 
-  <nav>
-    <a href="#about" class="nav-highlight">About</a>
-    <a href="#certs" class="nav-highlight">Certifications</a>
-    <a href="#experience" class="nav-highlight">Experience</a>
-    <a href="#skills" class="nav-highlight">Skills</a>
-  </nav>
+  <div class="nav-center">
+    <a href="#about">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#certs">Certifications</a>
+  </div>
 
+  <div class="nav-right">
+    <a href="mailto:jellodurante95@gmail.com" class="contact-btn">Contact Me</a>
+  </div>
+</nav>
+  
  <header>
   <div class="hero">
     <div class="hero-img">
@@ -312,17 +350,19 @@
     </div>
 
     <div class="hero-text">
-      <h1>Jello Durante</h1>
-      <p>IT Professional & Computer Engineer</p>
+  <h1>Hi! I’m <span class="accent">Jello Durante</span></h1>
+  <h2>IT Professional & Computer Engineer</h2>
 
-      <div class="hero-actions">
-        <a class="btn" href="Jello_Durante_Resume.pdf" download>⬇ Download Resume</a>
-        <a class="btn secondary" href="mailto:jellodurante95@gmail.com">✉ Contact Me</a>
-        <a class="btn secondary" href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-        <a class="btn secondary" href="https://github.com/jellodurante" target="_blank">GitHub</a>
-      </div>
-    </div>
+  <p>
+    Detail-oriented IT professional passionate about technology,
+    security, and enterprise systems.
+  </p>
+
+  <div class="hero-actions">
+    <a class="btn" href="Jello_Durante_Resume.pdf" download>Download Resume</a>
+    <a class="btn secondary" href="mailto:jellodurante95@gmail.com">Contact Me</a>
   </div>
+</div>
 </header>
 
   <section id="about" class="reveal show">
@@ -479,6 +519,7 @@
     </div>
 </body>
 </html>
+
 
 
 
